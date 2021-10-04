@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d8f9dc;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.clock {
+    font-family: 'Bonheur Royale', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: #f9f4f4;
+    border: 0.5rem solid #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, .1),
+                0 0.5rem 0.5rem rgba(0, 0, 0, .1),
+                0 0 0 2px rgba(255, 255, 255, 1);
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.2rem;
+  }
+  
+  .clock .number1 { --rotation: 30deg; }
+  .clock .number2 { --rotation: 60deg; }
+  .clock .number3 { --rotation: 90deg; }
+  .clock .number4 { --rotation: 120deg; }
+  .clock .number5 { --rotation: 150deg; }
+  .clock .number6 { --rotation: 180deg; }
+  .clock .number7 { --rotation: 210deg; }
+  .clock .number8 { --rotation: 240deg; }
+  .clock .number9 { --rotation: 270deg; }
+  .clock .number10 { --rotation: 300deg; }
+  .clock .number11 { --rotation: 330deg; }
+
+  .clock::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .minute,
+.clock .second {
+    position: absolute;
+}
+
+.clock .hour, .hrhand {
+    width: 5rem;
+    height: 5rem;
+}
+
+.clock .minute, .mnhand {
+    width: 6rem;
+    height: 6rem;
+}
+
+.clock .second, .schand {
+    width: 7rem;
+    height: 7rem;
+}
+
+.hrhand, .mnhand, .schand {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hrhand::before {
+    content: '';
+    position: absolute; 
+    width: 4px;
+    height: 3.5rem;
+    background: #3B6E42; 
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mnhand::before {
+    content: '';
+    position: absolute; 
+    width: 4px;
+    height: 4rem;
+    background: #778834; 
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.schand::before {
+    content: '';
+    position: absolute; 
+    width: 2px;
+    height: 5.5rem;
+    background: #72A677;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
