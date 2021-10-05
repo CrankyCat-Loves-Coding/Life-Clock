@@ -17,6 +17,17 @@ body {
     padding: 1rem;
 }
 
+.greeting {
+    width: 8rem;
+    height: 13rem;
+    display: flex;
+    align-items: flex-end;
+    font-size: 8vw;
+    color: #3B6E42;
+    text-shadow: 3px 1px 0 rgba(0, 0, 0, .1);
+            
+}
+
 .clock {
     font-family: 'Bonheur Royale', cursive;
     display: flex;
@@ -35,8 +46,8 @@ body {
 .clock .number {
     --rotation: 0;
     position: absolute;
-    width: 9rem;
-    height: 9rem;
+    width: 8.5rem;
+    height: 8.5rem;
     text-align: center;
     transform: rotate(var(--rotation));
     font-size: 1.2rem;
